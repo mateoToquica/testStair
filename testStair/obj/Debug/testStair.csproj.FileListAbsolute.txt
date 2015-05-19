@@ -1,0 +1,6 @@
+C:\Users\usuario\Desktop\testStair\testStair\bin\Debug\testStair.exe.config
+C:\Users\usuario\Desktop\testStair\testStair\bin\Debug\testStair.exe
+C:\Users\usuario\Desktop\testStair\testStair\bin\Debug\testStair.pdb
+C:\Users\usuario\Desktop\testStair\testStair\obj\Debug\testStair.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\testStair\testStair\obj\Debug\testStair.exe
+C:\Users\usuario\Desktop\testStair\testStair\obj\Debug\testStair.pdb
