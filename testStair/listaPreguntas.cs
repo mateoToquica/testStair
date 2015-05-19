@@ -7,17 +7,8 @@ using System.Linq;
 
 public class listaPreguntas{
 
-	//Lista de preguntas creadas
 	List<pregunta> trivia = new List<pregunta>();
 	List<int> preg = new List<int>();
-	//Pantalla en la que se mostraran las preguntas
-	//public Rect windowRect;
-	//public Rect windowRect = new Rect(20, 20, 120, 50);
-	//variable a la cual se le asignara un valor aleatorio para obtener la pregunta de la lista
-
-	//respuesta seleccionada de la pregunta
-
-	//Tamaños de los botones de las opciones de respuesta a la pregunta
 	int a=0;
 	int b=0;
 	int c=0;
@@ -26,7 +17,6 @@ public class listaPreguntas{
 	int f=0;
 	int g=0;
 	int h=0;
-
 	int w1=0;
 	int w2=0;
 	int w3=0;
@@ -69,9 +59,6 @@ public class listaPreguntas{
 
 	}
 
-
-
-
 	public List<int> getPreg()
 	{
 		return preg;
@@ -91,7 +78,6 @@ public class listaPreguntas{
 	{
 		if (saltos (cad) == 0) {
 			if (saltos (trivia [i].getResp1 ()) == 0 && saltos (trivia [i].getResp2 ()) == 0 && saltos (trivia [i].getResp3 ()) == 0 && saltos (trivia [i].getResp4 ()) == 0 && saltos (trivia [i].getResp5 ()) == 0) {
-				//Debug.Log("entra1");
 				w1 = 10;
 				w2 = 20;
 				w3 = 600;
@@ -107,9 +93,6 @@ public class listaPreguntas{
 				h= 230;
 				
 			} else {
-				
-				//Debug.Log("entra2");
-					//windowRect = new Rect (10, 20, 850, 400);
 
 					w1 = 10;
 					w2 = 20;
@@ -132,7 +115,6 @@ public class listaPreguntas{
 			if(saltos(cad)==1)
 			{
 				if (saltos (trivia [i].getResp1 ()) == 0 && saltos (trivia [i].getResp2 ()) == 0 && saltos (trivia [i].getResp3 ()) == 0 && saltos (trivia [i].getResp4 ()) == 0 && saltos (trivia [i].getResp5 ()) == 0) {
-					//Debug.Log("entra3");
 					w1 = 10;
 					w2 = 20;
 					w3 = 500;
@@ -149,7 +131,6 @@ public class listaPreguntas{
 				}
 
 				else{
-					//Debug.Log("entra4");
 					w1 = 10;
 					w2 = 20;
 					w3 = 950;
@@ -170,8 +151,7 @@ public class listaPreguntas{
 				if (saltos (cad)==2){
 					
 					if (saltos (trivia [i].getResp1 ()) == 0 && saltos (trivia [i].getResp2 ()) == 0 && saltos (trivia [i].getResp3 ()) == 0 && saltos (trivia [i].getResp4 ()) == 0 && saltos (trivia [i].getResp5 ()) == 0) {
-						//windowRect = new Rect(10, 20, 800, 400);
-						//Debug.Log("entra5");
+
 						w1 = 10;
 						w2 = 20;
 						w3 = 800;
@@ -190,8 +170,7 @@ public class listaPreguntas{
 					else{
 
 						if (saltos (trivia [i].getResp1 ()) > 2 || saltos (trivia [i].getResp2 ()) > 2 || saltos (trivia [i].getResp3 ()) > 2 || saltos (trivia [i].getResp4 ()) > 2 || saltos (trivia [i].getResp5 ()) > 2) {
-							//windowRect = new Rect(10, 20, 850, 400);
-							//Debug.Log("entra6");
+	
 							w1 = 10;
 							w2 = 20;
 							w3 = 850;
@@ -212,7 +191,6 @@ public class listaPreguntas{
 				else
 				{
 					if (saltos (cad)>=3){
-						//Debug.Log("entra7");	
 						w1 = 10;
 						w2 = 20;
 						w3 = 650;
@@ -304,9 +282,6 @@ public class listaPreguntas{
 			string resp3 = "";
 			string resp4 = "";
 			string resp5 = "";
-			
-			
-			//Pregunta 1
 			preg = "La inmunidad innata se caracteriza por ser inespecifica y actuar inmediatamente," +"\n" + "señale los elementos Humorales y Celulares propios de esta:";
 			resp1 = "Linfocitos T - Anticuerpos";
 			resp2 = "Macrofagos - Lisozima";
@@ -318,9 +293,7 @@ public class listaPreguntas{
 			
 			pregunta p1 = new pregunta(preg, resp1, resp2, resp3, null, null, respv,id);
 			trivia.Add (p1);
-			//opt.Clear ();
-			
-			//Pregunta 2
+
 			preg = "De las siguientes opciones,"+"\n"+ "señale la definicion que corresponda al termino Hapteno.";
 			resp1 = "Molécula glicoproteína que tiene la capacidad"+"\n"+ "de reconocer un antígeno especifico.";
 			resp2 = "Molécula de la superficie celular de los LT"+"\n"+ "que facilita el proceso de activación"+"\n"+ "de los linfocitos B.";
@@ -332,9 +305,7 @@ public class listaPreguntas{
 			
 			pregunta p2 = new pregunta(preg, resp1, resp2, resp3, resp4, null, respv,id);
 			trivia.Add (p2);
-			//opt2.Clear ();
 			
-			//Pregunta 3
 			preg = "Señale en cual de los siguientes organos linfoides "+"\n"+ "ocurre la seleccion positiva y negativa de los LT (Linfositos T).";
 			resp1 = "Medula osea fetal.";
 			resp2 = "Bazo.";
@@ -347,9 +318,7 @@ public class listaPreguntas{
 			
 			pregunta p3 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p3);
-			//opt.Clear ();
-			
-			//Pregunta 4
+
 			preg = "El Complejo de ataque a membrana (mac)"+"\n"+ "es el mecansismo final efector del complemento mediante el cual"+"\n"+ "se generan poros en la membrana de la celula blanco y "+"\n"+ "posteriormente se da la lisis osmotica, "+"\n"+ "señale las moleculas del complemento "+"\n"+ "que constituyen este complejo.";
 			resp1 = "C5bC6C7C8C9n.";
 			resp2 = "C3b-Fb.";
@@ -362,9 +331,7 @@ public class listaPreguntas{
 			
 			pregunta p4 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p4);
-			//opt.Clear ();
-			
-			//Pregunta 5
+
 			preg = "Seleccione de las siguientes proteinas del "+"\n"+ "complemento cuales hacen parte  de las anafilotoxinas:";
 			resp1 = "C9.";
 			resp2 = "C1q.";
@@ -377,9 +344,7 @@ public class listaPreguntas{
 			
 			pregunta p5 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p5);
-			//opt.Clear ();
-			
-			//Pregunta 6
+
 			preg = "Los anticuerpos son glicoproteínas de gran peso molecular "+"\n"+ "secretadas por los linfocitos b activados(células plasmáticas) "+"\n"+ "por los lt helper como resultado de la respuesta inmune especifica,"+"\n"+ "señale cual es el anticuerpo predominante"+"\n"+ " en la respuesta inmune secundaria:";
 			resp1 = "IgD.";
 			resp2 = "IgG.";
@@ -392,9 +357,7 @@ public class listaPreguntas{
 			
 			pregunta p6 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p6);
-			//opt.Clear ();
-			
-			//Pregunta 7
+
 			preg = "Las inmunoglobulinas  de acuerdo a  su estructura y peso molecular "+"\n"+ "pueden o no atravesar la barrera placentaria, señale cual de las siguientes "+"\n"+ "inmunoglobulinas no atraviesa la barrera placentaria:";
 			resp1 = "IgD.";
 			resp2 = "IgG.";
@@ -407,9 +370,7 @@ public class listaPreguntas{
 			
 			pregunta p7 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p7);
-			//opt.Clear ();
-			
-			//Pregunta 8
+
 			preg = "Cuales de las siguientes inmunoglobulinas activan el complemento  por la via clasica:";
 			resp1 = "IgD.";
 			resp2 = "IgG.";
@@ -419,9 +380,7 @@ public class listaPreguntas{
 			
 			pregunta p8 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p8);
-			//opt.Clear ();
-			
-			//Pregunta 9
+
 			preg = "Señale las características de la respuesta inmune inespecífica:";
 			resp1 = "Depende principalmente de los Linfocitos B y T.";
 			resp2 = "Es específica y de memoria.";
@@ -431,9 +390,7 @@ public class listaPreguntas{
 			
 			pregunta p9 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p9);
-			//opt.Clear ();
-			
-			//Pregunta 10
+
 			preg = "Señale cual de los elementos  NO es un componente de la inmunidad innata:";
 			resp1 = "Flora bacteriana.";
 			resp2 = "Factores constitutivos "+"\n"+ "(Genéticos-Hormonales-Metabólicos).";
@@ -446,9 +403,7 @@ public class listaPreguntas{
 			
 			pregunta p10 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p10);
-			//opt.Clear ();
-			
-			//Pregunta 11
+
 			preg = "Señale cuales de las siguientes células  NO  participan en el proceso de inflamación:";
 			resp1 = "Macrófagos.";
 			resp2 = "Eosinofilos.";
@@ -461,9 +416,7 @@ public class listaPreguntas{
 			
 			pregunta p11 = new pregunta(preg, resp1, resp2, resp3, resp4, resp5, respv,id);
 			trivia.Add (p11);
-			//opt.Clear ();
-			
-			//Pregunta 12
+
 			preg = "Durante el desarrollo embrionario los linfocitos T "+"\n"+ "deben recibir una serie de receptores de membrana que "+"\n"+ "permiten su selección clonal y ulterior  desarrollo Y,"+"\n"+ "señale en el órgano que ocurre este proceso:";
 			resp1 = "Bazo.";
 			resp2 = "Páncreas.";
